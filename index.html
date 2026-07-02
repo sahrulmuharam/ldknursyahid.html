@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDK Nursyahid - Website Resmi</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS Kustom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="asset/ldk.png" alt="Logo LDK" style="height: 30px;" class="me-2">LDK NURSYAHID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownTentang" role="button" data-bs-toggle="dropdown">Tentang Kami</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sejarah.html">Sejarah Singkat</a></li>
+                            <li><a class="dropdown-item" href="visi-misi.html">Visi & Misi</a></li>
+                            <li><a class="dropdown-item" href="struktur.html">Struktur Pengurus</a></li>
+                            <li><a class="dropdown-item" href="kontak.html">Hubungi Kami</a></li>
+                            <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="departemen.html">Departemen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kegiatan.html">Kegiatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownLainnya" role="button" data-bs-toggle="dropdown">Lainnya</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="laporan.html">Laporan</a></li>
+                            <li><a class="dropdown-item" href="jadwal.html">Jadwal Agenda</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian Carousel Hero Baru -->
+    <header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" data-bs-interval="7000" style="background-image: url('asset/1.jpeg')">
+                <div class="carousel-caption">
+                    <h1 class="display-3 fw-bold">LDK Nursyahid</h1>
+                    <p class="lead mb-4">Menjadi Wadah Dakwah yang Inklusif, Inovatif, dan Inspiratif.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('asset/2.jpeg')">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Program Unggulan</h1>
+                    <p class="lead mb-4">Kajian rutin, mentoring, dan aksi sosial untuk membangun generasi Rabbani.</p>
+                    <a href="kegiatan.html" class="btn btn-success btn-lg">Lihat Kegiatan</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('asset/3.jpeg')">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Ukhuwah Islamiyah</h1>
+                    <p class="lead mb-4">Mempererat tali persaudaraan dalam naungan iman dan Islam.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </header>
+
+    <div id="beranda" class="page-content active">
+        <!-- Konten Program Unggulan dipindahkan ke sini -->
+        <div class="container" style="margin-top: 50px;">
+            <h2 class="text-center mb-5">Program Unggulan</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="program-kajian-rutin.html" class="card-link">
+                        <div class="card p-4 h-100 text-center"><i class="bi bi-book fs-1 text-success"></i><h4 class="mt-3">Kajian Rutin</h4><p>Mendalami ilmu agama bersama pakar.</p></div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="program-mentoring.html" class="card-link">
+                        <div class="card p-4 h-100 text-center"><i class="bi bi-people fs-1 text-success"></i><h4 class="mt-3">Mentoring</h4><p>Pendampingan iman mahasiswa baru.</p></div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="program-aksi-sosial.html" class="card-link">
+                        <div class="card p-4 h-100 text-center"><i class="bi bi-heart-fill fs-1 text-success"></i><h4 class="mt-3">Aksi Sosial</h4><p>Berbagi untuk sesama.</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Tentang Kami (Singkat) -->
+        <div class="container my-5 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="asset/1.jpeg" class="img-fluid rounded-3 shadow-lg" alt="Tim LDK Nursyahid" decoding="async">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="fw-bold">Selamat Datang di LDK Nursyahid</h2>
+                    <p class="text-muted mt-3">Kami adalah Lembaga Dakwah Kampus yang menjadi wadah bagi mahasiswa untuk memperdalam nilai-nilai keislaman, mengembangkan potensi diri, dan berkontribusi positif bagi lingkungan sekitar.</p>
+                    <p>Dengan semangat ukhuwah, kami menyelenggarakan berbagai program pembinaan, syiar, dan aksi sosial yang inovatif dan inspiratif.</p>
+                    <a href="struktur.html" class="btn btn-outline-success mt-3">Kenali Tim Kami <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Berita Terbaru -->
+        <div class="container my-5">
+            <h2 class="text-center mb-5">Berita & Informasi Terbaru</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1573496774439-c9a1a3157594?q=80&w=800&h=500&fit=crop" class="card-img-top" alt="Berita 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Kajian Kemuslimahan Spesial di Era Digital</h5>
+                            <p class="card-text text-muted small mb-2"><i class="bi bi-calendar-event me-1"></i> 20 Sep 2026</p>
+                            <p class="card-text">Membahas peran dan tantangan muslimah dalam memanfaatkan teknologi secara positif.</p>
+                            <a href="berita-detail-5.html" class="btn btn-success mt-auto align-self-start">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&h=500&fit=crop" class="card-img-top" alt="Berita 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Tabligh Akbar Awal Semester Sukses Digelar</h5>
+                            <p class="card-text text-muted small mb-2"><i class="bi bi-calendar-event me-1"></i> 15 Sep 2026</p>
+                            <p class="card-text">Ratusan mahasiswa hadiri acara untuk bangkitkan semangat keislaman di awal semester baru.</p>
+                            <a href="berita-detail-1.html" class="btn btn-success mt-auto align-self-start">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card h-100 text-center bg-success text-white p-4 d-flex justify-content-center align-items-center">
+                        <div><h4 class="fw-bold">Lihat Semua Berita</h4><p>Ikuti semua perkembangan terbaru dari kegiatan kami.</p><a href="berita.html" class="btn btn-light">Kunjungi Halaman Berita</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Call to Action (CTA) -->
+    <div class="container-fluid cta-section">
+        <div class="container text-center text-white py-5">
+            <h2 class="fw-bold">Jadilah Bagian dari Keluarga Dakwah</h2>
+            <p class="lead my-3">Mari bergabung bersama LDK Nursyahid untuk belajar, berkarya, dan menebar manfaat.</p>
+            <a href="kontak.html" class="btn btn-light btn-lg me-2">Hubungi Kami</a>
+            <a href="layanan.html" class="btn btn-outline-light btn-lg">Daftar Anggota</a>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-5 col-xl-5 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-success"><i class="bi bi-mosque me-2"></i>LDK Nursyahid</h5>
+                    <p>Wadah Dakwah yang Inklusif, Inovatif, dan Inspiratif bagi mahasiswa untuk memperdalam nilai-nilai keislaman.</p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-success">Kontak</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Kampus Pusat Gedung D, Lt. 2</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> info@ldknursyahid.org</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +62 123 4567 890</p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-success">Ikuti Kami</h5>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; <span id="copyright-year"></span> LDK Nursyahid. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Kustom -->
+    <script src="script.js"></script>
+</body>
+</html>

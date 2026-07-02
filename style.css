@@ -1,0 +1,275 @@
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f0f4f3; 
+    background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    color: #333; 
+}
+
+.navbar { 
+    /* Atur background awal menjadi transparan */
+    background-color: transparent;
+    /* Transisi untuk perubahan yang mulus */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Diperlukan untuk positioning absolut pseudo-element */
+    position: relative; 
+    /* Pastikan navbar di atas konten lain */
+    z-index: 1030;
+}
+
+/*
+ * Tambahkan overlay gradien gelap di belakang navbar HANYA saat berada di atas gambar hero.
+ * Ini untuk memastikan teks menu tetap terbaca dengan baik.
+*/
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%; /* Tinggi gradien disesuaikan agar pas dengan navbar */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%); /* Gradien dibuat lebih lembut */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1; /* Letakkan di belakang konten navbar */
+    pointer-events: none; /* Pastikan tidak mengganggu interaksi mouse */
+}
+
+/* Gaya Navbar saat di-scroll */
+.navbar-scrolled {
+    background-color: #065f46;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar.navbar-scrolled::before {
+    opacity: 0;
+}
+
+.navbar-brand { font-weight: 700; letter-spacing: 1px; color: #fff !important; }
+
+/* --- Gaya untuk Carousel Hero --- */
+.carousel-item {
+    height: 90vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Animasi untuk teks di dalam caption */
+.carousel-item .carousel-caption h1,
+.carousel-item .carousel-caption p,
+.carousel-item .carousel-caption .btn,
+.carousel-item .carousel-caption #timer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;
+}
+.carousel-item.active .carousel-caption h1,
+.carousel-item.active .carousel-caption p,
+.carousel-item.active .carousel-caption .btn,
+.carousel-item.active .carousel-caption #timer {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- Akhir Gaya Carousel Hero --- */
+
+.page-content { display: none; padding: 20px 0; min-height: 500px; animation: fadeIn 0.4s ease-in-out; }
+.page-content.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.card { 
+    border: none; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+    transition: all 0.3s ease; 
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+
+.footer {
+    background-color: #052e25; /* Hijau yang lebih gelap dan elegan */
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer .footer-heading {
+    font-weight: 600;
+    color: #10b981; /* Hijau terang untuk kontras */
+    letter-spacing: 0.5px;
+}
+
+.footer .contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer .contact-list li {
+    padding-bottom: 0.75rem;
+    display: flex;
+    align-items: start;
+}
+
+.footer .contact-list i {
+    margin-right: 12px;
+    margin-top: 4px;
+    color: #10b981;
+}
+
+.footer .social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    background-color: #10b981;
+    color: #fff;
+}
+
+.footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.countdown-item { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 15px; border-radius: 15px; min-width: 90px; margin: 5px; }
+
+/* Style untuk Galeri Interaktif */
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Style untuk link kartu */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style untuk Halaman Struktur Pengurus */
+.profile-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.profile-card .card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: -60px auto 0;
+    border: 4px solid rgb(3, 3, 3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.profile-card .social-links a {
+    color: #6c757d;
+    transition: color 0.2s;
+}
+.profile-card .social-links a:hover {
+    color: #065f46;
+}
+
+/* Style untuk form input */
+.form-control:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+/* Style untuk Call to Action (CTA) */
+.cta-section {
+    background: linear-gradient(135deg, rgba(6, 95, 70, 0.9), rgba(16, 185, 129, 0.9)), url('https://images.unsplash.com/photo-1569062212344-20a7a7f05599?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* --- Gaya untuk Halaman Kegiatan (Timeline) --- */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Garis vertikal di tengah */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #065f46;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Lingkaran pada timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #047857;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Posisi item */
+.left { left: 0; }
+.right { left: 50%; }
+.right::after { left: -16px; }
+
+/* Media Query untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .timeline::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+    .timeline-item.right { left: 0%; }
+    .left::after, .right::after { left: 15px; }
+}
+
+/* --- Animasi saat Scroll --- */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
